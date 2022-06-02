@@ -15,4 +15,40 @@ package example;
  */
 
 public class Shouter {
+    private String message;
+
+    // Constructor
+    public Shouter(String msg) {
+        this.message = msg;
+    }
+
+    // Getter
+    public String getMessage() {
+        return this.message;
+    }
+
+    // Setter
+    public void setMessage(String newMessage) {
+        this.message = newMessage;
+    }
+
+    // printMe
+    public void printMe() {
+        System.out.println(this.message);
+    }
+
+    // shout
+    public void shout() {
+        System.out.println(this.message.toUpperCase());
+    }
+
+    public static void main(String[] args) {
+        Shouter s = new Shouter("Hi");
+        s.printMe();
+        // System.out.println(s.getMessage());
+        s.setMessage("This is a new message");
+        s.printMe();
+        // System.out.println(s.getMessage());
+        s.shout();
+    }
 }
