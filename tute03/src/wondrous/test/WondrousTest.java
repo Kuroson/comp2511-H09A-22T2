@@ -15,7 +15,7 @@ public class WondrousTest {
     public void testBasic() {
         Wondrous w = new Wondrous();
         List<Integer> expected = new ArrayList<Integer>(Arrays.asList(3, 10, 5, 16, 8, 4, 2, 1));
-        
+
         assertEquals(expected, w.wondrous(3));
     }
 }
