@@ -14,7 +14,7 @@ public class Restaurant {
 
     public Restaurant(String name) {
         this.name = name;
-        JSONArray menuJSON = JSONHelper.readInData("src/restaurant/prices.json");
+        JSONArray menuJSON = JSONHelper.readInData("tute05/src/restaurant/prices.json");
 
         for (Object Meal : menuJSON) {
             JSONObject jsonMeal = (JSONObject) Meal;
