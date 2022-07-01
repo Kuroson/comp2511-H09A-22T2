@@ -12,7 +12,11 @@ public class StandardStrategy implements ChargingStrategy {
 
     @Override
     public double cost(List<Meal> order, boolean payeeIsMember) {
-        return 0.0;
+        // order is list of something
+        // 1. Convert it to a stream
+        // 2. Using stream, we map (Meal) -> double
+        // 3. Sum over the stream
+        return order.stream().mapToDouble(meal -> meal.getCost()).sum();
     }
 
     @Override

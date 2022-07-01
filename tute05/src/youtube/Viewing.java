@@ -7,7 +7,7 @@ public class Viewing {
     private Video video;
     private Video nextVideo;
     private Producer user;
-    private ViewingState state = new ReadyState(this);
+    private ViewingState state = new ReadyState(this); // Default state is ready state
     private boolean playing = false;
 
     public Viewing(Video video, Video nextVideo, Producer user) {
@@ -36,17 +36,20 @@ public class Viewing {
         return nextVideo.getName();
     }
 
+    // === Input ===
+
     public String lock() {
-        return state.onLock();
+        // Method forwarding
+        return this.state.onLock();
     }
 
     public String play() {
-        return state.onPlay();
+        return this.state.onPlay();
     }
 
     public String next() {
         this.video = nextVideo;
-        return state.onNext();
+        return this.state.onNext();
     }
 
     public static void main(String[] args) {
