@@ -3,7 +3,6 @@ package calculator;
 import calculator.Expression.Expression;
 
 public class Calculator {
-
     private Expression expression;
 
     public Calculator(Expression expression) {
@@ -17,4 +16,7 @@ public class Calculator {
         return expression.compute();
     }
 
+    public static void main(String[] args) {
+
+    }
 }

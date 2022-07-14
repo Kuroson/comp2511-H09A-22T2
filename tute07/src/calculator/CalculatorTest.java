@@ -41,8 +41,7 @@ public class CalculatorTest {
     public void testIntegration() {
         // ((1 + 2) + (3 / 4)) - ((5 / 10) * (7 * 8)) = -24.25
         Calculator calculator = new Calculator(new SubtractionExpression(
-                new AdditionExpression(
-                        new AdditionExpression(new Number(1), new Number(2)),
+                new AdditionExpression(new AdditionExpression(new Number(1), new Number(2)),
                         new DivisionExpression(new Number(3), new Number(4))),
                 new MultiplicationExpression(
                         new DivisionExpression(new Number(5), new Number(10)),
