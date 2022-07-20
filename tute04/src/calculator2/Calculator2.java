@@ -1,6 +1,6 @@
-package calculator;
+package calculator2;
 
-public class Calculator {
+public class Calculator2 {
 
     public static Double add(Double a, Double b) {
         return a + b;
