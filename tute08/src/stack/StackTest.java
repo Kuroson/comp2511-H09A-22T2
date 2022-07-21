@@ -52,6 +52,7 @@ public class StackTest {
                 "you", "are", "how", "hello"));
         int i = 0;
 
+        // Implementing Iterable<E> allows us to use for-in
         for (String element : stack) {
             assertEquals(expected.get(i), element);
             i++;

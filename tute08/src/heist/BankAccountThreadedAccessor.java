@@ -20,7 +20,7 @@ public class BankAccountThreadedAccessor extends Thread {
     }
 
     public void run() {
-        BankAccountAccessor accessor = new BankAccountAccessor(account);
+        BankAccountAccessor accessor = BankAccountAccessor.instance(this.account);
         accessor.withdraw(user, numberOfWithdrawals, amountPerWithdrawal);
     }
 
