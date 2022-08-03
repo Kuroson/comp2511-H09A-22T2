@@ -1,0 +1,4 @@
+package Computer;
+
+interface ComputerComponent {
+}
